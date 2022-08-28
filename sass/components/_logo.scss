@@ -1,0 +1,21 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.logo__web {
+  color: var(--accent-color);
+}
+.logo__studio--dark {
+  color: var(--logo-header-color);
+}
+.logo__header {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.logo__studio--light {
+  color: var(--second-title-color);
+}

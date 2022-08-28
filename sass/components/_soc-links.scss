@@ -1,0 +1,35 @@
+// Team social links
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.socials__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transition-duration) var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+.socials__icon {
+  fill: var(--icon-color);
+  transition: fill var(--transition-duration) var(--cubic);
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: var(--second-title-color);
+  }
+}
+.socials__icon--light {
+  fill: var(--second-title-color);
+}
+
+.socials__link--grey-background {
+  background: rgba(255, 255, 255, 0.1);
+}

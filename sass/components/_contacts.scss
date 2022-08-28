@@ -1,0 +1,55 @@
+// Header contacts
+.contacts {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+.contacts__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color var(--transition-duration) var(--cubic);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.contats__list {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+.contacts__icon {
+  fill: currentColor;
+
+  margin-right: 10px;
+}
+
+//Footer contacts
+.footer-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-title-color);
+  transition: color var(--transition-duration) var(--cubic);
+}
+.address {
+  font-style: normal;
+  margin-top: 20px;
+}
+.address-list {
+  margin-top: 9px;
+}
+.address-item:last-child {
+  margin-top: 9px;
+}
+.address-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-duration) var(--cubic);
+}
