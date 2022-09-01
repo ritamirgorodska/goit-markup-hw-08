@@ -844,6 +844,12 @@ section {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .modal-checkbox {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
 
 .check-icon {
   fill: transparent;
@@ -860,6 +866,12 @@ section {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-link {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .modal-submit {
@@ -884,9 +896,20 @@ section {
 
 .portfolio-btn-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-btn-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-btn-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-btn {
@@ -926,12 +949,37 @@ section {
 
 .portfolio-list-item {
   background: var(--main-background-color);
-  flex-basis: 370px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-top-wrap {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio_img {
+  width: 450px;
+  height: 294px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio_img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio_img {
+    width: 370px;
+  }
 }
 
 .portfolio-top-text {
@@ -957,8 +1005,10 @@ section {
 }
 
 .portfolio-link {
-  display: block;
+  display: flex;
   transition: box-shadow var(--transition-duration) var(--cubic), transform var(--transition-duration) var(--cubic);
+  flex-direction: column;
+  height: 100%;
 }
 .portfolio-link:hover, .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -968,6 +1018,7 @@ section {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: transparent;
+  flex-grow: 1;
 }
 
 .portfolio-title {
@@ -976,6 +1027,7 @@ section {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-title-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-text {

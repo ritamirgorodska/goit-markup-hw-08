@@ -1,3 +1,51 @@
+.portfolio-btn-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+.portfolio-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+  min-width: 73px;
+
+  background: var(--third-background-color);
+  border-radius: 4px;
+  outline: none;
+  padding: 6px 22px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--cubic);
+  &:hover,
+  &:focus {
+    color: var(--second-title-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.current-btn {
+  color: var(--second-title-color);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -5,13 +53,29 @@
 }
 .portfolio-list-item {
   background: var(--main-background-color);
-  flex-basis: 370px;
   width: 100%;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-top-wrap {
   position: relative;
   overflow: hidden;
+}
+.portfolio_img {
+  width: 450px;
+  height: 294px;
+  @include tablet {
+    width: 354px;
+  }
+  @include desktop {
+    width: 370px;
+  }
 }
 .portfolio-top-text {
   position: absolute;
@@ -36,7 +100,7 @@
   }
 }
 .portfolio-link {
-  display: block;
+  display: flex;
   transition: box-shadow var(--transition-duration) var(--cubic),
     transform var(--transition-duration) var(--cubic);
   &:hover,
@@ -44,12 +108,15 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  flex-direction: column;
+  height: 100%;
 }
 
 .portfolio-description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: transparent;
+  flex-grow: 1;
 }
 .portfolio-title {
   font-weight: 700;
@@ -57,6 +124,7 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-title-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-text {
