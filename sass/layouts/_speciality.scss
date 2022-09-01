@@ -1,9 +1,19 @@
 .speciality__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+}
+.speciality__item {
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .speciality__icon-border {
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: var(--third-background-color);
   border-radius: 4px;
@@ -21,6 +31,7 @@
   text-transform: uppercase;
   color: var(--main-title-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 .speciality__text {
   font-size: 14px;

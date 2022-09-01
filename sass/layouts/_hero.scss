@@ -1,6 +1,7 @@
 .hero {
   display: block;
   max-width: 1600px;
+
   margin: 0 auto;
 
   background: var(--second-background-color);
@@ -14,29 +15,41 @@
   background-position: center;
   background-size: cover;
 
-  min-height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  min-height: 400px;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.34;
+
+  font-size: 26px;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--second-title-color);
-  margin-bottom: 40px;
-  max-width: 696px;
+  margin-bottom: 30px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.34;
+    margin-bottom: 40px;
+    max-width: 696px;
+  }
 }
 
 .hero__btn {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+  border: transparent;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
@@ -45,8 +58,8 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px 32px;
 
+  padding: 10px 24px;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -55,5 +68,8 @@
   &:hover,
   &:focus {
     background-color: var(--btn-background-color);
+  }
+  @include desktop {
+    padding: 10px 32px;
   }
 }

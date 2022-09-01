@@ -116,10 +116,15 @@
 .speciality__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+}
+
+.speciality__item {
+  width: 100%;
 }
 
 .speciality__icon-border {
-  width: 270px;
+  width: 450px;
   height: 120px;
   background: var(--third-background-color);
   border-radius: 4px;
@@ -137,6 +142,7 @@
   text-transform: uppercase;
   color: var(--main-title-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .speciality__text {
