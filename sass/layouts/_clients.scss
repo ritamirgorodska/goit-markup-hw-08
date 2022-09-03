@@ -1,10 +1,10 @@
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
-.clients-item {
+.clients__item {
   width: calc((100% - 30px) / 2);
   @include tablet {
     width: calc((100% - 60px) / 3);
@@ -13,7 +13,7 @@
     width: calc((100% - 150px) / 6);
   }
 }
-.clients-link {
+.clients__link {
   height: 92px;
 
   outline: transparent;
@@ -30,11 +30,11 @@
   }
 }
 
-.clients-icon {
+.clients__icon {
   fill: var(--icon-color);
   transition: fill var(--transition-duration) var(--cubic);
-  .clients-link:hover &,
-  .clients-link:focus & {
+  .clients__link:hover &,
+  .clients__link:focus & {
     fill: var(--accent-color);
   }
 }

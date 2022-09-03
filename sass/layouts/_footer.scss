@@ -3,14 +3,22 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-container {
+.footer__container {
   display: flex;
 
   justify-content: space-between;
-  align-items: baseline;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  @include desktop {
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-.footer-title {
+.footer__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -21,4 +29,31 @@
   margin-bottom: 20px;
 
   display: block;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.footer__socials {
+  text-align: center;
+}
+.footer__links {
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
+}
+.footer__tablet {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @include tablet {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 165px;
+  }
+  @include desktop {
+    gap: 70px;
+  }
 }

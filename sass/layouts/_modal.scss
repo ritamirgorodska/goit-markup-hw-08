@@ -9,6 +9,7 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+  overflow-y: scroll;
 }
 
 .modal {
@@ -44,7 +45,7 @@
   pointer-events: none;
 }
 
-.modal-close {
+.modal__close {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -58,15 +59,15 @@
   top: 8px;
   right: 8px;
 }
-.close-icon {
+.close__icon {
   fill: var(--logo-header-color);
   transition: fill 250ms var(--cubic);
-  .modal-close:hover & {
+  .modal__close:hover & {
     fill: var(--accent-color);
   }
 }
 
-.modal-title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -75,7 +76,7 @@
   color: var(--main-title-color);
   margin-bottom: 12px;
 }
-.modal-label {
+.modal__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -84,7 +85,7 @@
 
   color: var(--main-text-color);
 }
-.form-input {
+.form__input {
   font-size: 12px;
   font-size: 12px;
   line-height: 1.16;
@@ -108,7 +109,7 @@
     border: 1px solid var(--accent-color);
   }
 }
-.comment-input {
+.comment__input {
   min-height: 120px;
   margin-bottom: 20px;
   padding: 16px 12px;
@@ -116,25 +117,25 @@
   min-height: 120px;
 }
 
-.modal-icon-relative {
+.modal__icon-relative {
   position: relative;
   margin-bottom: 10px;
 }
-.modal-icon {
+.modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
   fill: var(--main-title-color);
   transition: fill 250ms var(--cubic);
-  .form-input:focus + & {
+  .form__input:focus + & {
     fill: var(--accent-color);
   }
 }
-.modal-checkbox {
+.modal__checkbox {
   display: flex;
   font-weight: 400;
- 
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -155,27 +156,26 @@
     transition: background-color var(--transition-duration) var(--cubic),
       border-color var(--transition-duration) var(--cubic);
     background-position: center;
-    .input-check:checked + & {
+    .input__check:checked + & {
       background-color: var(--accent-color);
       border-color: var(--accent-color);
     }
   }
-  @include desktop{
-     font-size: 14px;
-   line-height: 1.7;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 
-.check-icon {
+.check__icon {
   fill: transparent;
   transition: fill var(--transition-duration) var(--cubic);
-  .input-check:checked + .modal-checkbox & {
+  .input__check:checked + .modal__checkbox & {
     fill: var(--main-background-color);
   }
 }
 
-.modal-link {
- 
+.modal__link {
   font-size: 12px;
   line-height: 1.17;
 
@@ -183,13 +183,13 @@
   text-decoration-line: underline;
 
   color: var(--accent-color);
-  @include desktop{
-     font-size: 14px;
-   line-height: 1.7;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 
-.modal-submit {
+.modal__submit {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;

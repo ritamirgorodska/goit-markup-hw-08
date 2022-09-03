@@ -29,7 +29,7 @@
 }
 
 //Footer contacts
-.footer-link {
+.footer__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -40,13 +40,21 @@
   font-style: normal;
   margin-top: 20px;
 }
-.address-list {
-  margin-top: 9px;
+.address__list {
+  margin-top: 8px;
+  text-align: center;
+  @include desktop {
+    margin-top: 9px;
+    text-align: left;
+  }
 }
-.address-item:last-child {
-  margin-top: 9px;
+.address__item:last-child {
+  margin-top: 8px;
+  @include desktop {
+    margin-top: 9px;
+  }
 }
-.address-link {
+.address__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
