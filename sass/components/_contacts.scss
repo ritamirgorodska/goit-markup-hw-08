@@ -3,29 +3,69 @@
   display: flex;
   font-weight: 500;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.14;
+
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .contacts__link {
-  padding-top: 32px;
-  padding-bottom: 32px;
   transition: color var(--transition-duration) var(--cubic);
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .contats__list {
   display: flex;
-  gap: 50px;
-  margin-left: auto;
+
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    margin-bottom: 54px;
+    gap: 12px;
+  }
+  @include desktop {
+    gap: 30px;
+    margin-left: auto;
+    flex-direction: row;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .contacts__icon {
   fill: currentColor;
 
   margin-right: 10px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+  .contacts__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 //Footer contacts
