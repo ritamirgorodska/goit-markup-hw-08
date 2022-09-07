@@ -512,6 +512,7 @@ section {
   padding: 32px;
   background-color: #fff;
   z-index: 999;
+  overflow-y: scroll;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -536,6 +537,7 @@ section {
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow-y: scroll;
 }
 
 .mobile-menu .link {
@@ -556,17 +558,23 @@ section {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  gap: 2px;
 }
 
-.mobile__link {
+.mobile__item .mobile__link {
+  position: relative;
   color: var(--accent-color);
 }
-.mobile__link:not(:last-child)::after {
+.mobile__item .mobile__link:not(:nth-child(4))::after {
+  content: "";
+  position: absolute;
   display: block;
   width: 1px;
   height: 22px;
   background-color: rgba(33, 33, 33, 0.2);
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .hero {
