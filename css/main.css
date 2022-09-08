@@ -478,11 +478,6 @@ section {
     display: none;
   }
 }
-.menu .link:hover,
-.menu .link:focus {
-  text-decoration: underline;
-}
-
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
