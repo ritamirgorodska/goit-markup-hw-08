@@ -29,11 +29,10 @@
 
   flex-direction: column;
   gap: 10px;
-  padding-top: 21px;
-  padding-bottom: 21px;
+
   @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
-    margin-bottom: 54px;
+
     gap: 12px;
   }
   @include desktop {
@@ -67,7 +66,21 @@
     letter-spacing: 0.02em;
   }
 }
-
+@include tablet {
+  .contacts__phone {
+    padding-bottom: 21px;
+  }
+  .contacts__mail {
+    padding-top: 21px;
+  }
+}
+@include desktop {
+  .contacts__phone,
+  .contacts__mail {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
 //Footer contacts
 .footer__link {
   font-size: 14px;

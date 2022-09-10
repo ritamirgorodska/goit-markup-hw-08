@@ -32,6 +32,9 @@
   color: var(--main-title-color);
   margin-bottom: 10px;
   text-align: center;
+  @include tablet {
+    text-align: start;
+  }
 }
 .speciality__text {
   font-size: 14px;
