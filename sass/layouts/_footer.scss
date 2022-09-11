@@ -39,27 +39,32 @@
 .footer__socials {
   text-align: center;
   padding: 10px;
+  @include desktop {
+    padding: 0;
+  }
 }
 .footer__links {
   text-align: center;
   padding: 10px;
   @include desktop {
     text-align: left;
+    padding: 0;
   }
 }
 .footer__tablet {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
+  margin-bottom: 50px;
   @include tablet {
     flex-direction: row;
     align-items: baseline;
-    gap: 165px;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    padding: 0px 60px;
   }
   @include desktop {
     gap: 70px;
     margin-bottom: 0;
+    padding: 0;
   }
 }

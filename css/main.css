@@ -947,6 +947,11 @@ section {
   text-align: center;
   padding: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__socials {
+    padding: 0;
+  }
+}
 
 .footer__links {
   text-align: center;
@@ -955,27 +960,29 @@ section {
 @media screen and (min-width: 1200px) {
   .footer__links {
     text-align: left;
+    padding: 0;
   }
 }
 
 .footer__tablet {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .footer__tablet {
     flex-direction: row;
     align-items: baseline;
-    gap: 165px;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    justify-content: space-between;
+    padding: 0px 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__tablet {
     gap: 70px;
     margin-bottom: 0;
+    padding: 0;
   }
 }
 
@@ -1415,7 +1422,7 @@ section {
 .portfolio__link:hover .portfolio__top-text {
   transform: translateY(0%);
 }
-.portfolio__link:focus .portfolio__top-textt {
+.portfolio__link:focus .portfolio__top-text {
   transform: translateY(0%);
 }
 
